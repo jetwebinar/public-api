@@ -1,8 +1,8 @@
 <?php
+
 include_once("jetwebinar.php");
 
-$jw = new JetWebinar("webinars.test.jetwebinar.com","09fe34b8f5aedff29d9b853cffbf110f")
-
+$jw = new JetWebinar("webinars.test.jetwebinar.com","09fe34b8f5aedff29d9b853cffbf110f");
 
 $result = $jw->new_registrant(array(
 	"webinar_id"=>"707",
@@ -15,5 +15,4 @@ $result = $jw->new_registrant(array(
 ));
 
 print $result;
-
 ?>
