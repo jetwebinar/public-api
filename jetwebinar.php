@@ -30,6 +30,17 @@ class JetWebinar {
 		return $this->post("https://".$this->domain."/papi/new_registrant",$fields);
 	}
 	
+	public function list_webinars($fields) {
+		$fields["key"] = $this->api_key;
+		
+		return $this->post("https://".$this->domain."/papi/list_webinars",$fields);
+	}
+	
+	public function list_attendee_webinars($fields) {
+		$fields["key"] = $this->api_key;
+		return $this->post("https://".$this->domain."/papi/list_attendee_webinars",$fields);
+	}
+	
 	
 }
 ?>
